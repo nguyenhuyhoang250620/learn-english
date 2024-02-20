@@ -1,0 +1,97 @@
+.nav {
+  font-size: 15px;
+  font-weight: 600;
+  display: inline !important;
+  margin-top: 10px;
+  color: #B5122E;
+}
+
+.img {
+  color: red;
+}
+.logoWrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    width: 13%;
+  }
+  .logo_txt {
+    margin-top: 14px;
+    margin-left: 10px;
+    height: 35px;
+  }
+}
+
+.header {
+  display: block;
+  float: right;
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  .bell {
+    font-size: 25px;
+    color: white;
+    margin-left: 25px;
+  }
+
+  .username {
+    color: white;
+    float: right;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0 20px 0 20px;
+  }
+  .avatar {
+    float: right;
+    background-color: #ccc;
+  }
+  .select {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    margin-right: 20px;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 0; 
+    border-radius: 100px; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+}
+
+
+.drawer {
+  border: 1px solid #ccc;
+  width: 88%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-weight: 500;
+
+  .socket {
+    font-weight: 400;
+  }
+}
+.logout{
+  height: 40px;
+  width: 40px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+
+}
+.ant-dropdown-menu-item:hover {
+  background-color: transparent !important;
+  color: #ff5d5d !important;
+}

@@ -1,0 +1,24 @@
+.container {
+
+    border: 1px solid #ccc;
+    min-height: 100px;
+    border-radius: 20px;
+    padding: 1rem;
+
+    .selects {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .selectWrapper {
+            flex:1;
+            margin: 1rem 1rem;
+            .select {
+                width: 100%;
+            }
+        }
+    }
+
+    .buttons {
+        text-align: right;
+    }
+}

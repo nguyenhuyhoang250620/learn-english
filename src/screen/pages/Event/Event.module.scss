@@ -1,0 +1,41 @@
+.wrapper {
+  text-align: center;
+
+  .icon {
+    font-size: 2rem;
+    color: #2d49d3;
+    cursor: pointer;
+  }
+}
+
+.menu {
+  font-size: 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.header {
+  margin: 1rem 0 1rem 1rem;
+  color: #B5122E;
+}
+.filter{
+  float: 'right';
+  display: flex;
+  justify-content: flex-end;
+}
+
+.searchWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.select{
+  display: flex;
+  flex-direction: row;
+}
+
+.search{
+  height: 40px;
+  width: 100%;
+  display: flex;
+}

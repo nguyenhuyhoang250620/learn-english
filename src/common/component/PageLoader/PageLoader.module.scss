@@ -1,0 +1,13 @@
+.circularProgressRoot {
+  left: 0;
+  top: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:#2f64b5;
+  background-color: white;
+}

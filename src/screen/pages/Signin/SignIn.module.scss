@@ -1,0 +1,61 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .wrapper {
+    position: absolute;
+    width: 500px;
+    height: 70vh;
+    right: 5%;
+    top: 15%;
+    background: rgba(53, 53, 53, 0.5);
+    backdrop-filter: blur(10px);
+    .image_container {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding-top: 10%;
+      padding-bottom: 5%;
+    }
+    .title{
+      color: #ff5d5d;
+      text-align: center;
+    }
+    .logo{
+      width: 40%;
+      margin: 5px;
+    }
+    .txt_logo{
+      width: 90px;
+      height: 10%;
+      margin: 5px;
+      margin-top: 25px;
+    }
+    .header {
+      font-size: 2.5rem;
+      color: #100cee;
+      font-style: italic;
+      text-align: center;
+      margin-top: 4rem;
+      text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #fff 0px 0px 15px,
+        #0747f7 0px 0px 20px, #102fdf 0px 0px 30px, #2a60f3 0px 0px 40px,
+        #1358ee 0px 0px 50px, #080bdd 0px 0px 75px;
+    }
+    .form {
+      margin-top: 8rem;
+    }
+  }
+}
+.background_image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("../../../assets/images/background_login_min_best.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}

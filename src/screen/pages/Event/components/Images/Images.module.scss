@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  border-radius: 10px;
+  padding: 1rem 1rem 1rem 1rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+
+  .wrapper {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 360px;
+    width: 400px;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 10px;
+
+    .image {
+      background-color: rgb(92, 92, 92);
+      width: auto;
+      height: 250px;
+      border-radius: 10px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      max-width: 400px;
+      max-height: 250px;
+
+      .camera {
+        font-size: 3rem;
+        color: white;
+      }
+    }
+    .title {
+      margin: 0.5rem 1rem 0.5rem 0;
+      color: #242222cc;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: small;
+    }
+    .status {
+      width: 120px;
+      height: 30px;
+      padding: 10px;
+      display: flex;
+      border-radius: 5px;
+      align-items: center;
+      justify-content: center;
+      background-color: #3DADFE;
+      color: white;
+    }
+    .title_status {
+      margin: 0.5rem 1rem 0.5rem 0;
+      color:white;
+      text-align: center;
+    }
+  }
+}
+
+.modalWrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .item {
+    flex: 1;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+
+    .header {
+    }
+
+    .dateWrapper {
+      display: flex;
+      justify-content: space-between;
+
+      .date {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.pagination {
+  text-align: center;
+}
+.container_img {
+  position: relative;
+}
+
+.loading_animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Thêm CSS tùy chỉnh cho animation loading */
+}
+
+.image {
+  display: block;
+  /* Thêm CSS tùy chỉnh cho hình ảnh */
+}

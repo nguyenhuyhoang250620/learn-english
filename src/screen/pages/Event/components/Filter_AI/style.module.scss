@@ -1,0 +1,40 @@
+.dropdown { 
+    display: block;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 30px;
+  } 
+
+  .select_box { 
+    padding: 5px; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+  } 
+
+  .arrow { 
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    transition: transform 0.3s;
+    font-size: 14;
+    font-weight: lighter;
+  } 
+
+  .options { 
+    position: absolute; 
+    top: 100%;
+    width: 100%;
+    right: 0;
+    background-color:white; 
+    border: 1px solid #ccc; 
+    padding: 5px; 
+  } 
+  .title{
+    font-size: 14;
+    font-weight: lighter;
+  }
+  .input[type=checkbox] {
+    accent-color: red;
+  }

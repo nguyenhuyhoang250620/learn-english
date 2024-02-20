@@ -60,13 +60,6 @@ const SearchProfile = ({ filterRef, loadData }) => {
                 width: "100%",
               }}
             >
-              {idCardData?.map((index) => {
-                return (
-                  <Option value={index.soCmt} key={index.soCmt}>
-                    {index.soCmt}
-                  </Option>
-                );
-              })}
             </Select>
           </div>
 
@@ -82,13 +75,6 @@ const SearchProfile = ({ filterRef, loadData }) => {
                 width: "100%",
               }}
             >
-              {idCardData?.map((index) => {
-                return (
-                  <Option key={index.id} value={index.id}>
-                    {index.id}
-                  </Option>
-                );
-              })}
             </Select>
           </div>
           <div className={styles.select}>
@@ -101,9 +87,6 @@ const SearchProfile = ({ filterRef, loadData }) => {
               }}
               onChange={(value) => (filterRef.current.statuses = value)}
             >
-              <Option value={null}>{t('all')}</Option>
-              <Option value="available">{t('photo')}</Option>
-              <Option value="unavailable">{t('no_photo')}</Option>
             </Select>
           </div>
         </div>

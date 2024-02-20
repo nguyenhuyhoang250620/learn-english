@@ -1,38 +1,9 @@
-import {
-  BellFilled,
-  CarOutlined,
-  DownOutlined,
-  ExclamationCircleOutlined,
-  FrownOutlined,
-  NotificationOutlined,
-  ProfileOutlined,
-  UserOutlined,
-  UnorderedListOutlined,
-  GroupOutlined,
-  CalendarOutlined
-} from "@ant-design/icons";
-import {
-  Avatar,
-  Badge,
-  Drawer,
-  Dropdown,
-  Layout,
-  Menu,
-  Modal,
-  Select,
-  Space,
-  Switch,
-  theme,
-  Button
-} from "antd";
-import React, { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Layout, Menu, theme } from "antd";
+import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 // import LOGO from "../../assets/images/logo.svg";
 import LOGO from "../../assets/images/hawk_sense_logo.png";
 import CustomLogout from "./CustomLogout";
-//-----LOGO
-import vietnam from "../../assets/images/co_viet_nam.jpg";
-import english from "../../assets/images/co_nuoc_anh.jpg";
 
 // Utils
 import PATH from "../../constants/itemsContants";
@@ -46,8 +17,6 @@ import {
   selectSocketData,
 } from "../../redux/slice/SocketSlice";
 import TYPE_ACTION from "../../constants/TypeAction";
-import { baseURL } from "../../services/ConfigService/ApiService";
-import { formatDate } from "../../common/Functions/FomatDate";
 import { selectIsDarkMode } from "../../redux/slice/DarkModeSlice";
 import ViewEvent from "../pages/Event/components/ViewEvent/ViewEvent";
 import iconEventA from "../../assets/images_new/eventA.png"
@@ -97,28 +66,9 @@ const LayoutWrapper = ({ children }) => {
   const { SubMenu } = Menu;
   const menuItems = [
     { key: PATH.EVENT, 
-      title: t('event_management'),
-      icon:keys === PATH.EVENT? <img src={iconEventA} width={25}></img>:<img src={iconEventB} width={25}></img>
+      title: "Từ vựng",
     }, // Menu.Item đơn giản
-    {
-      key: PATH.LIST,
-      title: t('identity_object_managements'),
-      icon: keys === PATH.LIST || keys === PATH.PROFILE || keys === PATH.PLATE || keys === PATH.BLACK_LIST ? <img src={iconlistA} width={25}></img>: <img src={iconlistB} width={25}></img>,
-      children: [
-        { key: PATH.PROFILE, title: t('person'),icon: keys === PATH.PROFILE? <img src={iconPersonA} width={25}></img>: <img src={iconPersonB} width={25}></img> }, // Menu.Item con
-        { key: PATH.PLATE, title: t('vehicle'), icon: keys ===PATH.PLATE ?<img src={iconVehicleA} width={25}/>:<img src={iconVehicleB} width={25}/>}, // Menu.Item con
-        { key: PATH.BLACK_LIST, title: t('group'), icon: keys ===PATH.BLACK_LIST ?<img src={iconGroupA} width={25}/>:<img src={iconGroupB} width={25}/>, }, // Menu.Item con
-      ],
-    },
   ];
-
-
-  const closeDrawer = () => {
-    setOpen(false);
-    dispatch({
-      type: TYPE_ACTION.SOCKET.DELETE_SOCKET,
-    });
-  };
 
   return (
     <Layout>
@@ -127,15 +77,6 @@ const LayoutWrapper = ({ children }) => {
         position:"fixed",
         zIndex:"999"
       }}>          
-          <div className={styles.header}>
-              <CustomChangLanguage/>
-              <CustomLogout/>
-          </div>
-        <div className={styles.logoWrapper}>
-            <div style={{display:"flex"}}>
-              <img src={LOGO} alt="logo" className={styles.logo}></img>
-            </div>
-        </div>
       </Header>
 
         <Sider
@@ -150,9 +91,9 @@ const LayoutWrapper = ({ children }) => {
           }}
           collapsible
           collapsed={collapsed}
-          trigger={
-            <div>{collapsed ? 'Expanded' : 'Collapsed'}</div>
-          }
+          // trigger={
+          //   <div>{collapsed ? 'Expanded' : 'Collapsed'}</div>
+          // }
           onCollapse={(value) => setCollapsed(value)}
         >
           <Menu

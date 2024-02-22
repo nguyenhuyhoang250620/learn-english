@@ -1,9 +1,6 @@
 import { Layout, Menu, theme } from "antd";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-// import LOGO from "../../assets/images/logo.svg";
-import LOGO from "../../assets/images/hawk_sense_logo.png";
-import CustomLogout from "./CustomLogout";
 
 // Utils
 import PATH from "../../constants/itemsContants";
@@ -16,20 +13,7 @@ import { useTranslation} from 'react-i18next';
 import {
   selectSocketData,
 } from "../../redux/slice/SocketSlice";
-import TYPE_ACTION from "../../constants/TypeAction";
 import { selectIsDarkMode } from "../../redux/slice/DarkModeSlice";
-import ViewEvent from "../pages/Event/components/ViewEvent/ViewEvent";
-import iconEventA from "../../assets/images_new/eventA.png"
-import iconEventB from "../../assets/images_new/eventB.png"
-import iconlistA from "../../assets/images_new/profileA.png"
-import iconlistB from "../../assets/images_new/profileB.png"
-import iconPersonA from "../../assets/images_new/userA.png"
-import iconPersonB from "../../assets/images_new/userB.png"
-import iconVehicleA from "../../assets/images_new/carA.png"
-import iconVehicleB from "../../assets/images_new/carB.png"
-import iconGroupA from "../../assets/images_new/peopleA.png"
-import iconGroupB from "../../assets/images_new/peopleB.png"
-import CustomChangLanguage from "./CustomChangLanguage";
 const { Header, Content, Sider } = Layout;
 
 const LayoutWrapper = ({ children }) => {
@@ -144,7 +128,6 @@ const LayoutWrapper = ({ children }) => {
           >
             {children}
           </Content>
-          <ViewEvent></ViewEvent>
     </Layout>
   );
 };

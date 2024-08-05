@@ -1,75 +1,48 @@
-import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-import { combineReducers } from "redux";
-import createSagaMiddleware from "redux-saga";
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import { combineReducers } from 'redux';
+import createSagaMiddleware from 'redux-saga';
 
 // Saga
-import rootSaga from "../saga/index";
+import rootSaga from './saga/index';
 
-//Event
-import eventReducer from "../redux/slice/EventSlice";
+// Auth
+import authReducer from './slice/auth-slice';
+import tabsReducer from './slice/tabs-slice';
+import deviceReducer from './slice/device-slice';
+import liveReducer from "./slice/live-slice";
+import mapReducer from './slice/map-slice';
+import actionReducer from './slice/action-slice';
+import eventReducer from './slice/event-slice';
+import profileReducer from './slice/person-slice'
+import plateReducer from './slice/vehicle-slice'
+import viewEventReducer from './slice/view-event-slice';
+import groupReducer from './slice/group-slice';
 
-//Application
-import applicationReducer from "./slice/ApplicationSlice";
-
-//Camera
-import cameraReducer from "./slice/CameraSlice";
-
-//Region
-import regionReducer from "./slice/RegionSlice";
-
-//Auth
-import authReducer from "./slice/AuthSlice";
-
-//ID Card
-import idCard from "./slice/IDCardSlice";
-
-//Profile
-import profile from "./slice/ProfileSlice";
-
-//Socket
-import socket from "./slice/SocketSlice";
-
-//DarkMode
-import darkmode from "./slice/DarkModeSlice";
-
-//Plate
-import plate from "./slice/PlateSlice";
-
-//BlackList
-import blacklist from "./slice/BlackListSlice";
-
-//Location
-import location from "./slice/LocationSlice";
-
-//View Event 
-import viewEvent from "./slice/ViewEventSlice";
 
 const reducers = combineReducers({
-  events: eventReducer,
-  applications: applicationReducer,
-  cameras: cameraReducer,
-  regions: regionReducer,
-  auth: authReducer,
-  idCards: idCard,
-  profiles: profile,
-  sockets: socket,
-  darkmode: darkmode,
-  plates: plate,
-  blacklists: blacklist,
-  locations:location,
-  viewEvents:viewEvent
+	auth: authReducer,
+	tabs:tabsReducer,
+	device:deviceReducer,
+	live:liveReducer,
+	map:mapReducer,
+	action: actionReducer,
+	event:eventReducer,
+	profiles: profileReducer,
+	plates: plateReducer,
+	viewEvents: viewEventReducer,
+	groups: groupReducer,
 });
 
-let sagaMiddleware = createSagaMiddleware();
+const sagaMiddleware = createSagaMiddleware();
 const middleware = [
-  ...getDefaultMiddleware({ thunk: false, serializableCheck: false }),
-  sagaMiddleware,
+	...getDefaultMiddleware({thunk: false, serializableCheck: false}),
+	sagaMiddleware,
 ];
 
 const store = configureStore({
-  reducer: reducers,
-  middleware,
-  devTools: process.env.NODE_ENV !== "production",
+	reducer: reducers,
+	middleware,
+	devTools: process.env.NODE_ENV !== 'production',
 });
 
 sagaMiddleware.run(rootSaga);

@@ -1,24 +1,18 @@
-import { BrowserRouter } from "react-router-dom";
-import { Provider } from "react-redux";
+import {Provider} from 'react-redux';
 
-// Component
-import LayoutWrapper from "./screen/layouts";
 // Util
-import Router from "./router";
-import store from "./redux/store";
-import "./App.css";
-
-
+import store from './redux/store';
+import './App.css';
+import Router from './router';
+import {BrowserRouter} from 'react-router-dom';
 function App() {
-  return (
-      <Provider store={store}>
-        <BrowserRouter>
-          <LayoutWrapper>
-            <Router></Router>
-          </LayoutWrapper>
-        </BrowserRouter>
-      </Provider>
-  );
+	return (
+		<Provider store={store}>
+			<BrowserRouter>
+				<Router/>
+			</BrowserRouter>
+		</Provider>
+	);
 }
 
 export default App;

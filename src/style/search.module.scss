@@ -1,0 +1,55 @@
+.container_playback {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+}
+.tree_group {
+  height: 910px;
+  width: 15%;
+}
+.content_view {
+  height: 910px;
+  width: 70%;
+  overflow: hidden;
+}
+.list_record {
+  height: 910px;
+  width: 15%;
+}
+.time_filter {
+  width: 100%;
+  height: max-content;
+}
+.time_picker {
+  color: red;
+}
+.grid_container {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  place-items: center;
+//   grid-gap: 10px;
+}
+.toolbar_action {
+  height: 60px;
+  width: 1280px;
+  margin: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.space{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.toolbar_video{
+    height: 115px;
+    width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+}

@@ -5,7 +5,6 @@ import { imagesGrid } from "@common/images/image";
 import { VideoSeekSlider } from "react-video-seek-slider";
 import "./slider_style.css";
 import TYPE_ACTION from "@constants/action";
-import { getListCameraPreview, selectListCameraPreview, selectListCameraStream, selectSizeGrid } from "@redux/slice/live-slice";
 import { useDispatch, useSelector } from "react-redux";
 import { DndProvider, useDrop } from "react-dnd";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
@@ -13,7 +12,7 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { Dropdown } from "antd";
 
 const GridPlayBack = () => {
-  const listCameraStream = useSelector(selectListCameraStream);
+  const listCameraStream = useSelector();
   const dispatch=useDispatch()
   const numberCamera = 1;
   const initData = Array(numberCamera).fill(null);
@@ -181,8 +180,8 @@ const GridPlayBack = () => {
   }, [player]);
 
   const CustomListGrid = ({player, onClick}) => {
-    const numberCamera = useSelector(selectSizeGrid);
-    const listCameraPreview = useSelector(selectListCameraPreview);
+    const numberCamera = useSelector();
+    const listCameraPreview = useSelector();
     const [screenHeight, setScreenHeight] = useState(window.innerHeight);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const updateScreenHeight = () => {
@@ -207,12 +206,6 @@ const GridPlayBack = () => {
       const callBack = (data) => {
         data.map((item, index) => {
           dispatch(
-            getListCameraPreview({
-              index,
-              status: "Connect",
-              id: item.id,
-              url: item.urlRestream,
-            })
           );
         });
       };

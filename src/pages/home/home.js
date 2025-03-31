@@ -11,7 +11,7 @@ import { useNavigate } from "react-router";
 const HomeScreen = () => {
   const listTabs = [
     {
-      key: "live",
+      key: "vocabulary",
       icon: (
         <RiLiveFill
           className="text-[100px]"

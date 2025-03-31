@@ -7,7 +7,7 @@ const PATH = {
     CAMERA:'camera',
     STORAGE:'storage',
     SYSTEM:'system',
-    LIVE:'live',
+    LIVE:'vocabulary',
     MAP:'map',
     MAP_DETAIL:'map-detail',
     DEVICE_GROUP:'device-group',

@@ -1,4 +1,4 @@
 var SystemConfig = {
-    REACT_APP_API:"172.24.108.140:18080",
-    REACT_APP_API_MAP:"192.168.1.61:8041"
+    REACT_APP_API:"localhost:3001",
+    REACT_APP_API_MAP:"localhost:3001"
 };

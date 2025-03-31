@@ -61,5 +61,9 @@ const TYPE_ACTION = {
     GROUP: {
 		GET_GROUP: 'GET_GROUP',
 	},
+    VOCABULARY:{
+        GET_ALL_VOCABULARY: 'GET_ALL_VOCABULARY',
+        DELETE_VOCABULARY:"DELETE_VOCABULARY"
+    }
 };
 export default TYPE_ACTION;

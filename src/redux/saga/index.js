@@ -10,17 +10,8 @@ import { watchGetPlateSaga } from './vehicle-saga';
 import { watchGetEventProfile } from './person-saga';
 import { watchGetCollapse, watchGetViewEventSaga } from './view-event-saga';
 import {
-  watchDoGetListProvince,
-  watchDoSelectSizeGrid,
-  watchDoSelectOpenList,
-  watchDoGetListCameraPreview,
-  watchDoGetDataCameraWithProvince,
-  watchDoGetDataCameraWithID,
-  watchDoGetDistrictLive,
-  watchDoGetWardLive,
-  watchDoGetDevice,
-  watchDoGetAllCameraStream,
-  watchDoStopStream
+  watchDoGetAllDataVocabulary,
+  watchDoDeleteVocabulary
 } from "./live-saga";
 import { watchGetGroupListSaga } from "./group-saga";
 import {
@@ -53,17 +44,7 @@ export default function* rootSaga() {
     watchGetListEventAll(),
     watchGetProfileSaga(),
     watchGetEventProfile(),
-    watchDoGetListProvince(),
-    watchDoSelectSizeGrid(),
-    watchDoSelectOpenList(),
-    watchDoGetListCameraPreview(),
-    watchDoGetDataCameraWithProvince(),
-    watchDoGetDataCameraWithID(),
-    watchDoGetDistrictLive(),
-    watchDoGetWardLive(),
-    watchDoGetDevice(),
-    watchDoGetAllCameraStream(),
-    watchDoStopStream(),
+    watchDoGetAllDataVocabulary(),
     watchGetGroupListSaga(),
     watchGetLocationCamera(),
     watchGetDataAddress(),
@@ -80,5 +61,6 @@ export default function* rootSaga() {
     watchGetCameraDataGroup(),
     watchCloseGroup(),
     watchGetDataWard(),
+    watchDoDeleteVocabulary()
   ]);
 }

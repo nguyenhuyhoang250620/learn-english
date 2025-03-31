@@ -42,6 +42,10 @@ export const SERVICE_PATHS = {
         GET_PREVIEW_WITH_ID:'/api/camera/start-stream',
         STOP_STREAM:'/api/camera/stop-stream/all',
         GET_DATA_CAMERA_GROUP:"/api/device/inside-circle"
+	},
+	VOCABULARY:{
+		GET_ALL:'/all',
+		DELETE:'/person'
 	}
 
 };

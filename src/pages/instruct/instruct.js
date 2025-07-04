@@ -27,7 +27,7 @@ const InstructPage = () => {
       <Button type="primary" className="bg-black" onClick={() => onClickAdd()}>
         Thêm mới
       </Button>
-      <div className="flex flex-wrap gap-10">
+      <div className="flex flex-wrap gap-10 overflow-auto h-[60vh] bg-black">
         {listTest.reverse().map((item, index) => {
           return (
             <div

@@ -4,6 +4,7 @@ import * as React from "react";
 import i18n from "../locales/locales";
 import MainLayout from "src/layout/main-layout";
 import InstructPage from "@pages/instruct/instruct";
+import WordManagementLayout from "src/layout/word-management-layout";
 const Router = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -34,7 +35,9 @@ const Router = () => {
     <>
       <Routes>
         <Route path="" element={<MainLayout />}></Route>
-        <Route path="test" element={<InstructPage />}></Route>
+        <Route path="word-management" element={<WordManagementLayout />}>
+          <Route path="vocabulary" element={<InstructPage />}></Route>
+        </Route>
       </Routes>
     </>
   );

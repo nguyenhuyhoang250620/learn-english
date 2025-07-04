@@ -4,7 +4,7 @@ const MainLayout = () => {
   const navigate = useNavigate();
   const handleClickCard = (item) => {
     console.log(item);
-    navigate(`/test`);
+    navigate(`/word-management`);
   };
   return (
     <div className="h-screen w-screen bg-white  flex items-center justify-center">
